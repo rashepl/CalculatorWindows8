@@ -26,5 +26,10 @@ namespace CalculatorWindows8
         {
             this.InitializeComponent();
         }
+
+				private void Page_Loaded(object sender, RoutedEventArgs e)
+				{
+					_calculatorView.Content = new BasicCalculatorView();
+				}
     }
 }

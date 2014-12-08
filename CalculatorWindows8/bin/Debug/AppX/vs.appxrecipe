@@ -20,13 +20,13 @@
     <AppXManifest Include="D:\Software Projects\CalculatorWindows8\CalculatorWindows8\bin\Debug\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2014-12-07T02:36:27.094</Modified>
+      <Modified>2014-12-08T03:30:22.847</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="D:\Software Projects\CalculatorWindows8\CalculatorWindows8\bin\Debug\CalculatorWindows8.exe">
       <PackagePath>CalculatorWindows8.exe</PackagePath>
-      <Modified>2014-12-07T02:36:26.732</Modified>
+      <Modified>2014-12-08T03:50:18.761</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Software Projects\CalculatorWindows8\CalculatorWindows8\Assets\Logo.scale-100.png">
       <PackagePath>Assets\Logo.scale-100.png</PackagePath>
@@ -52,17 +52,21 @@
       <PackagePath>App.xbf</PackagePath>
       <Modified>2014-12-07T02:36:25.917</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Software Projects\CalculatorWindows8\CalculatorWindows8\bin\Debug\BasicCalculatorView.xbf">
+      <PackagePath>BasicCalculatorView.xbf</PackagePath>
+      <Modified>2014-12-08T03:50:18.479</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Software Projects\CalculatorWindows8\CalculatorWindows8\bin\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2014-12-07T02:36:25.917</Modified>
+      <Modified>2014-12-08T03:50:18.479</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Software Projects\CalculatorWindows8\CalculatorWindows8\bin\Debug\CalculatorWindows8.xr.xml">
       <PackagePath>CalculatorWindows8.xr.xml</PackagePath>
-      <Modified>2014-12-07T02:36:25.857</Modified>
+      <Modified>2014-12-08T03:49:12.751</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Software Projects\CalculatorWindows8\CalculatorWindows8\bin\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2014-12-07T02:36:26.899</Modified>
+      <Modified>2014-12-08T03:30:22.677</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

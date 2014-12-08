@@ -30,3 +30,8 @@ D:\Software Projects\CalculatorWindows8\CalculatorWindows8\obj\Debug\qualifiers.
 D:\Software Projects\CalculatorWindows8\CalculatorWindows8\obj\Debug\qualifiers.txt.intermediate
 D:\Software Projects\CalculatorWindows8\CalculatorWindows8\obj\Debug\MultipleQualifiersPerDimensionFound.txt
 D:\Software Projects\CalculatorWindows8\CalculatorWindows8\obj\Debug\ProjectArchitectures.txt
+D:\Software Projects\CalculatorWindows8\CalculatorWindows8\bin\Debug\BasicCalculatorView.xbf
+D:\Software Projects\CalculatorWindows8\CalculatorWindows8\obj\Debug\BasicCalculatorView.g.i.cs
+D:\Software Projects\CalculatorWindows8\CalculatorWindows8\obj\Debug\BasicCalculatorView.g.cs
+D:\Software Projects\CalculatorWindows8\CalculatorWindows8\obj\Debug\BasicCalculatorView.xaml
+D:\Software Projects\CalculatorWindows8\CalculatorWindows8\obj\Debug\BasicCalculatorView.xbf
