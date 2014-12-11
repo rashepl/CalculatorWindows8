@@ -1,5 +1,19 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Roots >
+  <Roots.PropertyPathNames>
+    <RootPropertyPathName Name="SelectAddButtonCommand" />
+    <RootPropertyPathName Name="SelectZeroButtonCommand" />
+    <RootPropertyPathName Name="SelectEqualsButtonCommand" />
+    <RootPropertyPathName Name="SelectThreeButtonCommand" />
+    <RootPropertyPathName Name="SelectTwoButtonCommand" />
+    <RootPropertyPathName Name="SelectOneButtonCommand" />
+    <RootPropertyPathName Name="SelectSixButtonCommand" />
+    <RootPropertyPathName Name="SelectFiveButtonCommand" />
+    <RootPropertyPathName Name="SelectFourButtonCommand" />
+    <RootPropertyPathName Name="SelectNineButtonCommand" />
+    <RootPropertyPathName Name="SelectEightButtonCommand" />
+    <RootPropertyPathName Name="SelectSevenButtonCommand" />
+  </Roots.PropertyPathNames>
   <Roots.RootTypes>
     <RootType FullName="Windows.UI.Xaml.Application" />
     <RootType FullName="Windows.UI.Xaml.Controls.UserControl">
@@ -31,6 +45,10 @@
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="Margin" />
+      <RootProperty Name="Command" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Data.Binding">
+      <RootProperty Name="Mode" />
     </RootType>
     <RootType FullName="CalculatorWindows8.BasicCalculatorView" />
     <RootType FullName="Windows.UI.Xaml.Controls.Page">

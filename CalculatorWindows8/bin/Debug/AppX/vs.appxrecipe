@@ -20,13 +20,13 @@
     <AppXManifest Include="D:\Software Projects\CalculatorWindows8\CalculatorWindows8\bin\Debug\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2014-12-08T03:30:22.847</Modified>
+      <Modified>2014-12-11T02:16:43.680</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="D:\Software Projects\CalculatorWindows8\CalculatorWindows8\bin\Debug\CalculatorWindows8.exe">
       <PackagePath>CalculatorWindows8.exe</PackagePath>
-      <Modified>2014-12-08T03:50:18.761</Modified>
+      <Modified>2014-12-11T02:29:21.622</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Software Projects\CalculatorWindows8\CalculatorWindows8\Assets\Logo.scale-100.png">
       <PackagePath>Assets\Logo.scale-100.png</PackagePath>
@@ -54,7 +54,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Software Projects\CalculatorWindows8\CalculatorWindows8\bin\Debug\BasicCalculatorView.xbf">
       <PackagePath>BasicCalculatorView.xbf</PackagePath>
-      <Modified>2014-12-08T03:50:18.479</Modified>
+      <Modified>2014-12-11T02:29:21.354</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Software Projects\CalculatorWindows8\CalculatorWindows8\bin\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
@@ -62,11 +62,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Software Projects\CalculatorWindows8\CalculatorWindows8\bin\Debug\CalculatorWindows8.xr.xml">
       <PackagePath>CalculatorWindows8.xr.xml</PackagePath>
-      <Modified>2014-12-08T03:49:12.751</Modified>
+      <Modified>2014-12-11T02:29:21.342</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Software Projects\CalculatorWindows8\CalculatorWindows8\bin\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2014-12-08T03:30:22.677</Modified>
+      <Modified>2014-12-11T02:16:43.487</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

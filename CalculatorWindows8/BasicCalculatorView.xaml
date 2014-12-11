@@ -35,23 +35,23 @@
         <Button x:Name="cButton" Content="C" Grid.Column="2" Grid.Row="1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="7"/>
         <Button x:Name="positiveNegativeButton" Content="+/-" Grid.Column="3" Grid.Row="1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="7"/>
         <Button x:Name="sqrtButton" Content="SQRT" Grid.Column="4" Grid.Row="1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="7"/>
-        <Button x:Name="sevenButton" Content="7" Grid.Column="0" Grid.Row="2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="7"/>
-        <Button x:Name="eightButton" Content="8" Grid.Column="1" Grid.Row="2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="7"/>
-        <Button x:Name="nineButton" Content="9" Grid.Column="2" Grid.Row="2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="7"/>
+        <Button x:Name="sevenButton" Content="7" Command="{Binding SelectSevenButtonCommand, Mode=OneWay}" Grid.Column="0" Grid.Row="2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="7"/>
+        <Button x:Name="eightButton" Content="8" Command="{Binding SelectEightButtonCommand, Mode=OneWay}" Grid.Column="1" Grid.Row="2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="7"/>
+        <Button x:Name="nineButton" Content="9" Command="{Binding SelectNineButtonCommand, Mode=OneWay}" Grid.Column="2" Grid.Row="2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="7"/>
         <Button x:Name="divideButton" Content="/" Grid.Column="3" Grid.Row="2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="7"/>
         <Button x:Name="modulusButton" Content="%" Grid.Column="4" Grid.Row="2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="7"/>
-        <Button x:Name="fourButton" Content="4" Grid.Column="0" Grid.Row="3" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="7"/>
-        <Button x:Name="fiveButton" Content="5" Grid.Column="1" Grid.Row="3" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="7"/>
-        <Button x:Name="sixButton" Content="6" Grid.Column="2" Grid.Row="3" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="7"/>
+        <Button x:Name="fourButton" Content="4" Command="{Binding SelectFourButtonCommand, Mode=OneWay}" Grid.Column="0" Grid.Row="3" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="7"/>
+        <Button x:Name="fiveButton" Content="5" Command="{Binding SelectFiveButtonCommand, Mode=OneWay}" Grid.Column="1" Grid.Row="3" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="7"/>
+        <Button x:Name="sixButton" Content="6" Command="{Binding SelectSixButtonCommand, Mode=OneWay}" Grid.Column="2" Grid.Row="3" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="7"/>
         <Button x:Name="multiplyButton" Content="*" Grid.Column="3" Grid.Row="3" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="7"/>
         <Button x:Name="inverseButton" Content="1/x" Grid.Column="4" Grid.Row="3" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="7"/>
-        <Button x:Name="oneButton" Content="1" Grid.Column="0" Grid.Row="4" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="7"/>
-        <Button x:Name="twoButton" Content="2" Grid.Column="1" Grid.Row="4" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="7"/>
-        <Button x:Name="threeButton" Content="3" Grid.Column="2" Grid.Row="4" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="7"/>
+        <Button x:Name="oneButton" Content="1" Command="{Binding SelectOneButtonCommand, Mode=OneWay}" Grid.Column="0" Grid.Row="4" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="7"/>
+        <Button x:Name="twoButton" Content="2" Command="{Binding SelectTwoButtonCommand, Mode=OneWay}" Grid.Column="1" Grid.Row="4" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="7"/>
+        <Button x:Name="threeButton" Content="3" Command="{Binding SelectThreeButtonCommand, Mode=OneWay}" Grid.Column="2" Grid.Row="4" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="7"/>
         <Button x:Name="subtractButton" Content="-" Grid.Column="3" Grid.Row="4" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="7"/>
-        <Button x:Name="equalsButton" Content="=" Grid.Column="4" Grid.Row="4" Grid.RowSpan="2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="7"/>
-        <Button x:Name="zeroButton" Content="0" Grid.Column="0" Grid.Row="5" Grid.ColumnSpan="2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="7"/>
+        <Button x:Name="equalsButton" Content="=" Command="{Binding SelectEqualsButtonCommand, Mode=OneWay}" Grid.Column="4" Grid.Row="4" Grid.RowSpan="2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="7"/>
+        <Button x:Name="zeroButton" Content="0" Command="{Binding SelectZeroButtonCommand, Mode=OneWay}" Grid.Column="0" Grid.Row="5" Grid.ColumnSpan="2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="7"/>
         <Button x:Name="decimalButton" Content="." Grid.Column="2" Grid.Row="5" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="7"/>
-        <Button x:Name="addButton" Content="+" Grid.Column="3" Grid.Row="5" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="7"/>
+        <Button x:Name="addButton" Content="+" Command="{Binding SelectAddButtonCommand, Mode=OneWay}" Grid.Column="3" Grid.Row="5" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="7"/>
     </Grid>
 </UserControl>

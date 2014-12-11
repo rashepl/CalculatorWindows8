@@ -22,14 +22,18 @@ namespace CalculatorWindows8
     /// </summary>
     public sealed partial class MainPage : Page
     {
+			private MainPageViewModel mainPageViewModel;
+
         public MainPage()
         {
             this.InitializeComponent();
+						mainPageViewModel = new MainPageViewModel();
         }
 
 				private void Page_Loaded(object sender, RoutedEventArgs e)
 				{
 					_calculatorView.Content = new BasicCalculatorView();
+					_calculatorView.DataContext = mainPageViewModel;
 				}
     }
 }
