@@ -124,17 +124,27 @@ namespace CalculatorWindows8.CalculatorWindows8_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[4];
+            _typeNameTable = new string[9];
             _typeNameTable[0] = "CalculatorWindows8.BasicCalculatorView";
             _typeNameTable[1] = "Windows.UI.Xaml.Controls.UserControl";
-            _typeNameTable[2] = "CalculatorWindows8.MainPage";
-            _typeNameTable[3] = "Windows.UI.Xaml.Controls.Page";
+            _typeNameTable[2] = "CalculatorWindows8.MainPageViewModel";
+            _typeNameTable[3] = "CalculatorWindows8.NotifyingViewModel";
+            _typeNameTable[4] = "Object";
+            _typeNameTable[5] = "System.Windows.Input.ICommand";
+            _typeNameTable[6] = "String";
+            _typeNameTable[7] = "CalculatorWindows8.MainPage";
+            _typeNameTable[8] = "Windows.UI.Xaml.Controls.Page";
 
-            _typeTable = new global::System.Type[4];
+            _typeTable = new global::System.Type[9];
             _typeTable[0] = typeof(global::CalculatorWindows8.BasicCalculatorView);
             _typeTable[1] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
-            _typeTable[2] = typeof(global::CalculatorWindows8.MainPage);
-            _typeTable[3] = typeof(global::Windows.UI.Xaml.Controls.Page);
+            _typeTable[2] = typeof(global::CalculatorWindows8.MainPageViewModel);
+            _typeTable[3] = typeof(global::CalculatorWindows8.NotifyingViewModel);
+            _typeTable[4] = typeof(global::System.Object);
+            _typeTable[5] = typeof(global::System.Windows.Input.ICommand);
+            _typeTable[6] = typeof(global::System.String);
+            _typeTable[7] = typeof(global::CalculatorWindows8.MainPage);
+            _typeTable[8] = typeof(global::Windows.UI.Xaml.Controls.Page);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -170,7 +180,9 @@ namespace CalculatorWindows8.CalculatorWindows8_XamlTypeInfo
         }
 
         private object Activate_0_BasicCalculatorView() { return new global::CalculatorWindows8.BasicCalculatorView(); }
-        private object Activate_2_MainPage() { return new global::CalculatorWindows8.MainPage(); }
+        private object Activate_2_MainPageViewModel() { return new global::CalculatorWindows8.MainPageViewModel(); }
+        private object Activate_3_NotifyingViewModel() { return new global::CalculatorWindows8.NotifyingViewModel(); }
+        private object Activate_7_MainPage() { return new global::CalculatorWindows8.MainPage(); }
 
         private global::Windows.UI.Xaml.Markup.IXamlType CreateXamlType(int typeIndex)
         {
@@ -193,14 +205,59 @@ namespace CalculatorWindows8.CalculatorWindows8_XamlTypeInfo
                 xamlType = new global::CalculatorWindows8.CalculatorWindows8_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 2:   //  CalculatorWindows8.MainPage
-                userType = new global::CalculatorWindows8.CalculatorWindows8_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_2_MainPage;
+            case 2:   //  CalculatorWindows8.MainPageViewModel
+                userType = new global::CalculatorWindows8.CalculatorWindows8_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("CalculatorWindows8.NotifyingViewModel"));
+                userType.Activator = Activate_2_MainPageViewModel;
+                userType.AddMemberName("SelectSevenButtonCommand");
+                userType.AddMemberName("SelectEightButtonCommand");
+                userType.AddMemberName("SelectNineButtonCommand");
+                userType.AddMemberName("SelectFourButtonCommand");
+                userType.AddMemberName("SelectFiveButtonCommand");
+                userType.AddMemberName("SelectSixButtonCommand");
+                userType.AddMemberName("SelectOneButtonCommand");
+                userType.AddMemberName("SelectTwoButtonCommand");
+                userType.AddMemberName("SelectThreeButtonCommand");
+                userType.AddMemberName("SelectZeroButtonCommand");
+                userType.AddMemberName("SelectEqualsButtonCommand");
+                userType.AddMemberName("SelectAddButtonCommand");
+                userType.AddMemberName("SelectSubtractButtonCommand");
+                userType.AddMemberName("SelectMultiplyButtonCommand");
+                userType.AddMemberName("SelectDivideButtonCommand");
+                userType.AddMemberName("SelectedValueDisplayed");
+                userType.AddMemberName("EquationDisplayed");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 3:   //  Windows.UI.Xaml.Controls.Page
+            case 3:   //  CalculatorWindows8.NotifyingViewModel
+                userType = new global::CalculatorWindows8.CalculatorWindows8_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.Activator = Activate_3_NotifyingViewModel;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 4:   //  Object
+                xamlType = new global::CalculatorWindows8.CalculatorWindows8_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                break;
+
+            case 5:   //  System.Windows.Input.ICommand
+                userType = new global::CalculatorWindows8.CalculatorWindows8_XamlTypeInfo.XamlUserType(this, typeName, type, null);
+                userType.SetIsReturnTypeStub();
+                xamlType = userType;
+                break;
+
+            case 6:   //  String
+                xamlType = new global::CalculatorWindows8.CalculatorWindows8_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                break;
+
+            case 7:   //  CalculatorWindows8.MainPage
+                userType = new global::CalculatorWindows8.CalculatorWindows8_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_7_MainPage;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 8:   //  Windows.UI.Xaml.Controls.Page
                 xamlType = new global::CalculatorWindows8.CalculatorWindows8_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
             }
@@ -208,11 +265,212 @@ namespace CalculatorWindows8.CalculatorWindows8_XamlTypeInfo
         }
 
 
+        private object get_0_MainPageViewModel_SelectSevenButtonCommand(object instance)
+        {
+            var that = (global::CalculatorWindows8.MainPageViewModel)instance;
+            return that.SelectSevenButtonCommand;
+        }
+        private object get_1_MainPageViewModel_SelectEightButtonCommand(object instance)
+        {
+            var that = (global::CalculatorWindows8.MainPageViewModel)instance;
+            return that.SelectEightButtonCommand;
+        }
+        private object get_2_MainPageViewModel_SelectNineButtonCommand(object instance)
+        {
+            var that = (global::CalculatorWindows8.MainPageViewModel)instance;
+            return that.SelectNineButtonCommand;
+        }
+        private object get_3_MainPageViewModel_SelectFourButtonCommand(object instance)
+        {
+            var that = (global::CalculatorWindows8.MainPageViewModel)instance;
+            return that.SelectFourButtonCommand;
+        }
+        private object get_4_MainPageViewModel_SelectFiveButtonCommand(object instance)
+        {
+            var that = (global::CalculatorWindows8.MainPageViewModel)instance;
+            return that.SelectFiveButtonCommand;
+        }
+        private object get_5_MainPageViewModel_SelectSixButtonCommand(object instance)
+        {
+            var that = (global::CalculatorWindows8.MainPageViewModel)instance;
+            return that.SelectSixButtonCommand;
+        }
+        private object get_6_MainPageViewModel_SelectOneButtonCommand(object instance)
+        {
+            var that = (global::CalculatorWindows8.MainPageViewModel)instance;
+            return that.SelectOneButtonCommand;
+        }
+        private object get_7_MainPageViewModel_SelectTwoButtonCommand(object instance)
+        {
+            var that = (global::CalculatorWindows8.MainPageViewModel)instance;
+            return that.SelectTwoButtonCommand;
+        }
+        private object get_8_MainPageViewModel_SelectThreeButtonCommand(object instance)
+        {
+            var that = (global::CalculatorWindows8.MainPageViewModel)instance;
+            return that.SelectThreeButtonCommand;
+        }
+        private object get_9_MainPageViewModel_SelectZeroButtonCommand(object instance)
+        {
+            var that = (global::CalculatorWindows8.MainPageViewModel)instance;
+            return that.SelectZeroButtonCommand;
+        }
+        private object get_10_MainPageViewModel_SelectEqualsButtonCommand(object instance)
+        {
+            var that = (global::CalculatorWindows8.MainPageViewModel)instance;
+            return that.SelectEqualsButtonCommand;
+        }
+        private object get_11_MainPageViewModel_SelectAddButtonCommand(object instance)
+        {
+            var that = (global::CalculatorWindows8.MainPageViewModel)instance;
+            return that.SelectAddButtonCommand;
+        }
+        private object get_12_MainPageViewModel_SelectSubtractButtonCommand(object instance)
+        {
+            var that = (global::CalculatorWindows8.MainPageViewModel)instance;
+            return that.SelectSubtractButtonCommand;
+        }
+        private object get_13_MainPageViewModel_SelectMultiplyButtonCommand(object instance)
+        {
+            var that = (global::CalculatorWindows8.MainPageViewModel)instance;
+            return that.SelectMultiplyButtonCommand;
+        }
+        private object get_14_MainPageViewModel_SelectDivideButtonCommand(object instance)
+        {
+            var that = (global::CalculatorWindows8.MainPageViewModel)instance;
+            return that.SelectDivideButtonCommand;
+        }
+        private object get_15_MainPageViewModel_SelectedValueDisplayed(object instance)
+        {
+            var that = (global::CalculatorWindows8.MainPageViewModel)instance;
+            return that.SelectedValueDisplayed;
+        }
+        private void set_15_MainPageViewModel_SelectedValueDisplayed(object instance, object Value)
+        {
+            var that = (global::CalculatorWindows8.MainPageViewModel)instance;
+            that.SelectedValueDisplayed = (global::System.String)Value;
+        }
+        private object get_16_MainPageViewModel_EquationDisplayed(object instance)
+        {
+            var that = (global::CalculatorWindows8.MainPageViewModel)instance;
+            return that.EquationDisplayed;
+        }
+        private void set_16_MainPageViewModel_EquationDisplayed(object instance, object Value)
+        {
+            var that = (global::CalculatorWindows8.MainPageViewModel)instance;
+            that.EquationDisplayed = (global::System.String)Value;
+        }
 
         private global::Windows.UI.Xaml.Markup.IXamlMember CreateXamlMember(string longMemberName)
         {
             global::CalculatorWindows8.CalculatorWindows8_XamlTypeInfo.XamlMember xamlMember = null;
-            // No Local Properties
+            global::CalculatorWindows8.CalculatorWindows8_XamlTypeInfo.XamlUserType userType;
+
+            switch (longMemberName)
+            {
+            case "CalculatorWindows8.MainPageViewModel.SelectSevenButtonCommand":
+                userType = (global::CalculatorWindows8.CalculatorWindows8_XamlTypeInfo.XamlUserType)GetXamlTypeByName("CalculatorWindows8.MainPageViewModel");
+                xamlMember = new global::CalculatorWindows8.CalculatorWindows8_XamlTypeInfo.XamlMember(this, "SelectSevenButtonCommand", "System.Windows.Input.ICommand");
+                xamlMember.Getter = get_0_MainPageViewModel_SelectSevenButtonCommand;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "CalculatorWindows8.MainPageViewModel.SelectEightButtonCommand":
+                userType = (global::CalculatorWindows8.CalculatorWindows8_XamlTypeInfo.XamlUserType)GetXamlTypeByName("CalculatorWindows8.MainPageViewModel");
+                xamlMember = new global::CalculatorWindows8.CalculatorWindows8_XamlTypeInfo.XamlMember(this, "SelectEightButtonCommand", "System.Windows.Input.ICommand");
+                xamlMember.Getter = get_1_MainPageViewModel_SelectEightButtonCommand;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "CalculatorWindows8.MainPageViewModel.SelectNineButtonCommand":
+                userType = (global::CalculatorWindows8.CalculatorWindows8_XamlTypeInfo.XamlUserType)GetXamlTypeByName("CalculatorWindows8.MainPageViewModel");
+                xamlMember = new global::CalculatorWindows8.CalculatorWindows8_XamlTypeInfo.XamlMember(this, "SelectNineButtonCommand", "System.Windows.Input.ICommand");
+                xamlMember.Getter = get_2_MainPageViewModel_SelectNineButtonCommand;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "CalculatorWindows8.MainPageViewModel.SelectFourButtonCommand":
+                userType = (global::CalculatorWindows8.CalculatorWindows8_XamlTypeInfo.XamlUserType)GetXamlTypeByName("CalculatorWindows8.MainPageViewModel");
+                xamlMember = new global::CalculatorWindows8.CalculatorWindows8_XamlTypeInfo.XamlMember(this, "SelectFourButtonCommand", "System.Windows.Input.ICommand");
+                xamlMember.Getter = get_3_MainPageViewModel_SelectFourButtonCommand;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "CalculatorWindows8.MainPageViewModel.SelectFiveButtonCommand":
+                userType = (global::CalculatorWindows8.CalculatorWindows8_XamlTypeInfo.XamlUserType)GetXamlTypeByName("CalculatorWindows8.MainPageViewModel");
+                xamlMember = new global::CalculatorWindows8.CalculatorWindows8_XamlTypeInfo.XamlMember(this, "SelectFiveButtonCommand", "System.Windows.Input.ICommand");
+                xamlMember.Getter = get_4_MainPageViewModel_SelectFiveButtonCommand;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "CalculatorWindows8.MainPageViewModel.SelectSixButtonCommand":
+                userType = (global::CalculatorWindows8.CalculatorWindows8_XamlTypeInfo.XamlUserType)GetXamlTypeByName("CalculatorWindows8.MainPageViewModel");
+                xamlMember = new global::CalculatorWindows8.CalculatorWindows8_XamlTypeInfo.XamlMember(this, "SelectSixButtonCommand", "System.Windows.Input.ICommand");
+                xamlMember.Getter = get_5_MainPageViewModel_SelectSixButtonCommand;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "CalculatorWindows8.MainPageViewModel.SelectOneButtonCommand":
+                userType = (global::CalculatorWindows8.CalculatorWindows8_XamlTypeInfo.XamlUserType)GetXamlTypeByName("CalculatorWindows8.MainPageViewModel");
+                xamlMember = new global::CalculatorWindows8.CalculatorWindows8_XamlTypeInfo.XamlMember(this, "SelectOneButtonCommand", "System.Windows.Input.ICommand");
+                xamlMember.Getter = get_6_MainPageViewModel_SelectOneButtonCommand;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "CalculatorWindows8.MainPageViewModel.SelectTwoButtonCommand":
+                userType = (global::CalculatorWindows8.CalculatorWindows8_XamlTypeInfo.XamlUserType)GetXamlTypeByName("CalculatorWindows8.MainPageViewModel");
+                xamlMember = new global::CalculatorWindows8.CalculatorWindows8_XamlTypeInfo.XamlMember(this, "SelectTwoButtonCommand", "System.Windows.Input.ICommand");
+                xamlMember.Getter = get_7_MainPageViewModel_SelectTwoButtonCommand;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "CalculatorWindows8.MainPageViewModel.SelectThreeButtonCommand":
+                userType = (global::CalculatorWindows8.CalculatorWindows8_XamlTypeInfo.XamlUserType)GetXamlTypeByName("CalculatorWindows8.MainPageViewModel");
+                xamlMember = new global::CalculatorWindows8.CalculatorWindows8_XamlTypeInfo.XamlMember(this, "SelectThreeButtonCommand", "System.Windows.Input.ICommand");
+                xamlMember.Getter = get_8_MainPageViewModel_SelectThreeButtonCommand;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "CalculatorWindows8.MainPageViewModel.SelectZeroButtonCommand":
+                userType = (global::CalculatorWindows8.CalculatorWindows8_XamlTypeInfo.XamlUserType)GetXamlTypeByName("CalculatorWindows8.MainPageViewModel");
+                xamlMember = new global::CalculatorWindows8.CalculatorWindows8_XamlTypeInfo.XamlMember(this, "SelectZeroButtonCommand", "System.Windows.Input.ICommand");
+                xamlMember.Getter = get_9_MainPageViewModel_SelectZeroButtonCommand;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "CalculatorWindows8.MainPageViewModel.SelectEqualsButtonCommand":
+                userType = (global::CalculatorWindows8.CalculatorWindows8_XamlTypeInfo.XamlUserType)GetXamlTypeByName("CalculatorWindows8.MainPageViewModel");
+                xamlMember = new global::CalculatorWindows8.CalculatorWindows8_XamlTypeInfo.XamlMember(this, "SelectEqualsButtonCommand", "System.Windows.Input.ICommand");
+                xamlMember.Getter = get_10_MainPageViewModel_SelectEqualsButtonCommand;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "CalculatorWindows8.MainPageViewModel.SelectAddButtonCommand":
+                userType = (global::CalculatorWindows8.CalculatorWindows8_XamlTypeInfo.XamlUserType)GetXamlTypeByName("CalculatorWindows8.MainPageViewModel");
+                xamlMember = new global::CalculatorWindows8.CalculatorWindows8_XamlTypeInfo.XamlMember(this, "SelectAddButtonCommand", "System.Windows.Input.ICommand");
+                xamlMember.Getter = get_11_MainPageViewModel_SelectAddButtonCommand;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "CalculatorWindows8.MainPageViewModel.SelectSubtractButtonCommand":
+                userType = (global::CalculatorWindows8.CalculatorWindows8_XamlTypeInfo.XamlUserType)GetXamlTypeByName("CalculatorWindows8.MainPageViewModel");
+                xamlMember = new global::CalculatorWindows8.CalculatorWindows8_XamlTypeInfo.XamlMember(this, "SelectSubtractButtonCommand", "System.Windows.Input.ICommand");
+                xamlMember.Getter = get_12_MainPageViewModel_SelectSubtractButtonCommand;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "CalculatorWindows8.MainPageViewModel.SelectMultiplyButtonCommand":
+                userType = (global::CalculatorWindows8.CalculatorWindows8_XamlTypeInfo.XamlUserType)GetXamlTypeByName("CalculatorWindows8.MainPageViewModel");
+                xamlMember = new global::CalculatorWindows8.CalculatorWindows8_XamlTypeInfo.XamlMember(this, "SelectMultiplyButtonCommand", "System.Windows.Input.ICommand");
+                xamlMember.Getter = get_13_MainPageViewModel_SelectMultiplyButtonCommand;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "CalculatorWindows8.MainPageViewModel.SelectDivideButtonCommand":
+                userType = (global::CalculatorWindows8.CalculatorWindows8_XamlTypeInfo.XamlUserType)GetXamlTypeByName("CalculatorWindows8.MainPageViewModel");
+                xamlMember = new global::CalculatorWindows8.CalculatorWindows8_XamlTypeInfo.XamlMember(this, "SelectDivideButtonCommand", "System.Windows.Input.ICommand");
+                xamlMember.Getter = get_14_MainPageViewModel_SelectDivideButtonCommand;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "CalculatorWindows8.MainPageViewModel.SelectedValueDisplayed":
+                userType = (global::CalculatorWindows8.CalculatorWindows8_XamlTypeInfo.XamlUserType)GetXamlTypeByName("CalculatorWindows8.MainPageViewModel");
+                xamlMember = new global::CalculatorWindows8.CalculatorWindows8_XamlTypeInfo.XamlMember(this, "SelectedValueDisplayed", "String");
+                xamlMember.Getter = get_15_MainPageViewModel_SelectedValueDisplayed;
+                xamlMember.Setter = set_15_MainPageViewModel_SelectedValueDisplayed;
+                break;
+            case "CalculatorWindows8.MainPageViewModel.EquationDisplayed":
+                userType = (global::CalculatorWindows8.CalculatorWindows8_XamlTypeInfo.XamlUserType)GetXamlTypeByName("CalculatorWindows8.MainPageViewModel");
+                xamlMember = new global::CalculatorWindows8.CalculatorWindows8_XamlTypeInfo.XamlMember(this, "EquationDisplayed", "String");
+                xamlMember.Getter = get_16_MainPageViewModel_EquationDisplayed;
+                xamlMember.Setter = set_16_MainPageViewModel_EquationDisplayed;
+                break;
+            }
             return xamlMember;
         }
     }

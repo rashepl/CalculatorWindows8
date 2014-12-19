@@ -17,23 +17,24 @@ using Windows.UI.Xaml.Navigation;
 
 namespace CalculatorWindows8
 {
-    /// <summary>
-    /// An empty page that can be used on its own or navigated to within a Frame.
-    /// </summary>
-    public sealed partial class MainPage : Page
-    {
-			private MainPageViewModel mainPageViewModel;
+	/// <summary>
+	/// An empty page that can be used on its own or navigated to within a Frame.
+	/// </summary>
+	public sealed partial class MainPage : Page
+	{
+		
+		private MainPageViewModel mainPageViewModel;
 
-        public MainPage()
-        {
-            this.InitializeComponent();
-						mainPageViewModel = new MainPageViewModel();
-        }
+		public MainPage()
+		{
+			this.InitializeComponent();
+			mainPageViewModel = new MainPageViewModel();
+		}
 
-				private void Page_Loaded(object sender, RoutedEventArgs e)
-				{
-					_calculatorView.Content = new BasicCalculatorView();
-					_calculatorView.DataContext = mainPageViewModel;
-				}
-    }
+		private void Page_Loaded(object sender, RoutedEventArgs e)
+		{
+			DataContext = mainPageViewModel;
+			_calculatorView.Content = new BasicCalculatorView();
+		}
+	}
 }

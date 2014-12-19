@@ -8,13 +8,21 @@
     mc:Ignorable="d"                     >
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" FlowDirection="RightToLeft">
+        <Grid.DataContext>
+            <local:MainPageViewModel/>
+        </Grid.DataContext>
         <Grid.RowDefinitions>
-            <RowDefinition Height="100*"/>
-            <RowDefinition Height="155*"/>
+            <RowDefinition Height="50*"/>
+            <RowDefinition Height="170*"/>
             <RowDefinition Height="613*"/>
         </Grid.RowDefinitions>
-        <TextBox Grid.Row="1" Text="0" Padding="0" TextAlignment="Right" Margin="7" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Stretch" FontSize="40"/>
-        <UserControl x:Name="_calculatorView" Grid.Row="2"/>
+        <Border Grid.Row="1" BorderBrush="#FF2065DE" BorderThickness="4">
+            <StackPanel>
+                <TextBlock Text="{Binding EquationDisplayed, Mode=OneWay}" Margin="7" FontSize="30" FlowDirection="LeftToRight" TextAlignment="Right" />
+                <TextBlock Text="{Binding SelectedValueDisplayed, Mode=OneWay}" Padding="0" Margin="7" FontSize="40" FlowDirection="LeftToRight" TextAlignment="Right" />
+            </StackPanel>
+        </Border>
+        <UserControl x:Name="_calculatorView" Grid.Row="3"/>
     </Grid>
 </Page>
 

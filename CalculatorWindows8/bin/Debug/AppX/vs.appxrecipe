@@ -1,14 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <Machine>PC</Machine>
+    <Machine>RICHARD</Machine>
     <WindowsUser>Richard</WindowsUser>
     <TargetPlatformIdentifier>Windows</TargetPlatformIdentifier>
     <SolutionConfiguration>Debug|AnyCPU</SolutionConfiguration>
     <PackageArchitecture>neutral</PackageArchitecture>
     <PackageIdentityName>4ad9ba64-636a-4803-9832-5b6babbf4434</PackageIdentityName>
     <IntermediateOutputPath>D:\Software Projects\CalculatorWindows8\CalculatorWindows8\obj\Debug\</IntermediateOutputPath>
-    <RegisteredManifestChecksum>1386D570A8E4448F737B3218B621257151B4DD2976F4A1CD995C4F5DDCD1299A</RegisteredManifestChecksum>
+    <RegisteredManifestChecksum>D57DFDC897060E04581769851A30D2792FBDB16A2F0C6054E137101586AD939D</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>4ad9ba64-636a-4803-9832-5b6babbf4434_1.0.0.0_neutral__bqbb28m2ksa1g</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>4ad9ba64-636a-4803-9832-5b6babbf4434_bqbb28m2ksa1g!App</RegisteredUserModeAppID>
     <RegisteredPackageID>4ad9ba64-636a-4803-9832-5b6babbf4434</RegisteredPackageID>
@@ -20,13 +20,13 @@
     <AppXManifest Include="D:\Software Projects\CalculatorWindows8\CalculatorWindows8\bin\Debug\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2014-12-11T02:16:43.680</Modified>
+      <Modified>2014-12-19T19:18:19.235</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="D:\Software Projects\CalculatorWindows8\CalculatorWindows8\bin\Debug\CalculatorWindows8.exe">
       <PackagePath>CalculatorWindows8.exe</PackagePath>
-      <Modified>2014-12-11T02:29:21.622</Modified>
+      <Modified>2014-12-19T19:28:06.350</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Software Projects\CalculatorWindows8\CalculatorWindows8\Assets\Logo.scale-100.png">
       <PackagePath>Assets\Logo.scale-100.png</PackagePath>
@@ -54,19 +54,19 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Software Projects\CalculatorWindows8\CalculatorWindows8\bin\Debug\BasicCalculatorView.xbf">
       <PackagePath>BasicCalculatorView.xbf</PackagePath>
-      <Modified>2014-12-11T02:29:21.354</Modified>
+      <Modified>2014-12-19T19:22:57.017</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Software Projects\CalculatorWindows8\CalculatorWindows8\bin\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2014-12-08T03:50:18.479</Modified>
+      <Modified>2014-12-19T19:28:06.044</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Software Projects\CalculatorWindows8\CalculatorWindows8\bin\Debug\CalculatorWindows8.xr.xml">
       <PackagePath>CalculatorWindows8.xr.xml</PackagePath>
-      <Modified>2014-12-11T02:29:21.342</Modified>
+      <Modified>2014-12-19T19:25:59.583</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Software Projects\CalculatorWindows8\CalculatorWindows8\bin\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2014-12-11T02:16:43.487</Modified>
+      <Modified>2014-12-19T19:18:19.177</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
