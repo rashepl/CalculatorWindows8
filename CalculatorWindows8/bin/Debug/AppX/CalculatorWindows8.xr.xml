@@ -16,6 +16,9 @@
     <RootPropertyPathName Name="SelectNineButtonCommand" />
     <RootPropertyPathName Name="SelectEightButtonCommand" />
     <RootPropertyPathName Name="SelectSevenButtonCommand" />
+    <RootPropertyPathName Name="SelectCButtonCommand" />
+    <RootPropertyPathName Name="SelectCEButtonCommand" />
+    <RootPropertyPathName Name="SelectBackButtonCommand" />
     <RootPropertyPathName Name="SelectedValueDisplayed" />
     <RootPropertyPathName Name="EquationDisplayed" />
   </Roots.PropertyPathNames>

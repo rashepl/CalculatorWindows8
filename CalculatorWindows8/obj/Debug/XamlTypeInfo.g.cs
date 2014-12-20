@@ -223,6 +223,9 @@ namespace CalculatorWindows8.CalculatorWindows8_XamlTypeInfo
                 userType.AddMemberName("SelectSubtractButtonCommand");
                 userType.AddMemberName("SelectMultiplyButtonCommand");
                 userType.AddMemberName("SelectDivideButtonCommand");
+                userType.AddMemberName("SelectCButtonCommand");
+                userType.AddMemberName("SelectCEButtonCommand");
+                userType.AddMemberName("SelectBackButtonCommand");
                 userType.AddMemberName("SelectedValueDisplayed");
                 userType.AddMemberName("EquationDisplayed");
                 userType.SetIsLocalType();
@@ -340,22 +343,37 @@ namespace CalculatorWindows8.CalculatorWindows8_XamlTypeInfo
             var that = (global::CalculatorWindows8.MainPageViewModel)instance;
             return that.SelectDivideButtonCommand;
         }
-        private object get_15_MainPageViewModel_SelectedValueDisplayed(object instance)
+        private object get_15_MainPageViewModel_SelectCButtonCommand(object instance)
+        {
+            var that = (global::CalculatorWindows8.MainPageViewModel)instance;
+            return that.SelectCButtonCommand;
+        }
+        private object get_16_MainPageViewModel_SelectCEButtonCommand(object instance)
+        {
+            var that = (global::CalculatorWindows8.MainPageViewModel)instance;
+            return that.SelectCEButtonCommand;
+        }
+        private object get_17_MainPageViewModel_SelectBackButtonCommand(object instance)
+        {
+            var that = (global::CalculatorWindows8.MainPageViewModel)instance;
+            return that.SelectBackButtonCommand;
+        }
+        private object get_18_MainPageViewModel_SelectedValueDisplayed(object instance)
         {
             var that = (global::CalculatorWindows8.MainPageViewModel)instance;
             return that.SelectedValueDisplayed;
         }
-        private void set_15_MainPageViewModel_SelectedValueDisplayed(object instance, object Value)
+        private void set_18_MainPageViewModel_SelectedValueDisplayed(object instance, object Value)
         {
             var that = (global::CalculatorWindows8.MainPageViewModel)instance;
             that.SelectedValueDisplayed = (global::System.String)Value;
         }
-        private object get_16_MainPageViewModel_EquationDisplayed(object instance)
+        private object get_19_MainPageViewModel_EquationDisplayed(object instance)
         {
             var that = (global::CalculatorWindows8.MainPageViewModel)instance;
             return that.EquationDisplayed;
         }
-        private void set_16_MainPageViewModel_EquationDisplayed(object instance, object Value)
+        private void set_19_MainPageViewModel_EquationDisplayed(object instance, object Value)
         {
             var that = (global::CalculatorWindows8.MainPageViewModel)instance;
             that.EquationDisplayed = (global::System.String)Value;
@@ -458,17 +476,35 @@ namespace CalculatorWindows8.CalculatorWindows8_XamlTypeInfo
                 xamlMember.Getter = get_14_MainPageViewModel_SelectDivideButtonCommand;
                 xamlMember.SetIsReadOnly();
                 break;
+            case "CalculatorWindows8.MainPageViewModel.SelectCButtonCommand":
+                userType = (global::CalculatorWindows8.CalculatorWindows8_XamlTypeInfo.XamlUserType)GetXamlTypeByName("CalculatorWindows8.MainPageViewModel");
+                xamlMember = new global::CalculatorWindows8.CalculatorWindows8_XamlTypeInfo.XamlMember(this, "SelectCButtonCommand", "System.Windows.Input.ICommand");
+                xamlMember.Getter = get_15_MainPageViewModel_SelectCButtonCommand;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "CalculatorWindows8.MainPageViewModel.SelectCEButtonCommand":
+                userType = (global::CalculatorWindows8.CalculatorWindows8_XamlTypeInfo.XamlUserType)GetXamlTypeByName("CalculatorWindows8.MainPageViewModel");
+                xamlMember = new global::CalculatorWindows8.CalculatorWindows8_XamlTypeInfo.XamlMember(this, "SelectCEButtonCommand", "System.Windows.Input.ICommand");
+                xamlMember.Getter = get_16_MainPageViewModel_SelectCEButtonCommand;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "CalculatorWindows8.MainPageViewModel.SelectBackButtonCommand":
+                userType = (global::CalculatorWindows8.CalculatorWindows8_XamlTypeInfo.XamlUserType)GetXamlTypeByName("CalculatorWindows8.MainPageViewModel");
+                xamlMember = new global::CalculatorWindows8.CalculatorWindows8_XamlTypeInfo.XamlMember(this, "SelectBackButtonCommand", "System.Windows.Input.ICommand");
+                xamlMember.Getter = get_17_MainPageViewModel_SelectBackButtonCommand;
+                xamlMember.SetIsReadOnly();
+                break;
             case "CalculatorWindows8.MainPageViewModel.SelectedValueDisplayed":
                 userType = (global::CalculatorWindows8.CalculatorWindows8_XamlTypeInfo.XamlUserType)GetXamlTypeByName("CalculatorWindows8.MainPageViewModel");
                 xamlMember = new global::CalculatorWindows8.CalculatorWindows8_XamlTypeInfo.XamlMember(this, "SelectedValueDisplayed", "String");
-                xamlMember.Getter = get_15_MainPageViewModel_SelectedValueDisplayed;
-                xamlMember.Setter = set_15_MainPageViewModel_SelectedValueDisplayed;
+                xamlMember.Getter = get_18_MainPageViewModel_SelectedValueDisplayed;
+                xamlMember.Setter = set_18_MainPageViewModel_SelectedValueDisplayed;
                 break;
             case "CalculatorWindows8.MainPageViewModel.EquationDisplayed":
                 userType = (global::CalculatorWindows8.CalculatorWindows8_XamlTypeInfo.XamlUserType)GetXamlTypeByName("CalculatorWindows8.MainPageViewModel");
                 xamlMember = new global::CalculatorWindows8.CalculatorWindows8_XamlTypeInfo.XamlMember(this, "EquationDisplayed", "String");
-                xamlMember.Getter = get_16_MainPageViewModel_EquationDisplayed;
-                xamlMember.Setter = set_16_MainPageViewModel_EquationDisplayed;
+                xamlMember.Getter = get_19_MainPageViewModel_EquationDisplayed;
+                xamlMember.Setter = set_19_MainPageViewModel_EquationDisplayed;
                 break;
             }
             return xamlMember;
@@ -795,5 +831,6 @@ namespace CalculatorWindows8.CalculatorWindows8_XamlTypeInfo
         }
     }
 }
+
 
 

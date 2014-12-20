@@ -161,6 +161,21 @@ namespace CalculatorWindows8
 			get { return new RelayCommand(SelectDivideButton); }
 		}
 
+		public ICommand SelectCButtonCommand
+		{
+			get { return new RelayCommand(SelectCButton); }
+		}
+
+		public ICommand SelectCEButtonCommand
+		{
+			get { return new RelayCommand(SelectCEButton); }
+		}
+
+		public ICommand SelectBackButtonCommand
+		{
+			get { return new RelayCommand(SelectBackButton); }
+		}
+
 		/// <summary>
 		/// gets/sets the value selected by the user
 		/// </summary>
@@ -532,6 +547,37 @@ namespace CalculatorWindows8
 					_calculate = true;
 				}
 			}
+		}
+
+		/// <summary>
+		/// reset the calculated value and the last value entered by the user
+		/// </summary>
+		/// <param name="sender"></param>
+		private void SelectCButton(object sender)
+		{
+			EquationDisplayed = string.Empty;
+			CalculatedValue = 0;
+			SelectedValueDisplayed = "0";
+		}
+
+		/// <summary>
+		/// reset the last value entered by the user
+		/// </summary>
+		/// <param name="sender"></param>
+		private void SelectCEButton(object sender)
+		{
+			SelectedValue = 0;
+			SelectedValueDisplayed = "0";
+		}
+
+		/// <summary>
+		/// display the last entry on the selected value
+		/// </summary>
+		/// <param name="sender"></param>
+		private void SelectBackButton(object sender)
+		{
+			SelectedValue /= 10;
+			SelectedValueDisplayed = SelectedValue.ToString();
 		}
 
 		#endregion
