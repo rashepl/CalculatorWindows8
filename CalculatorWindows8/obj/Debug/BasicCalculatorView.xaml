@@ -65,7 +65,7 @@
                 <TextBlock Text="C"/>
             </Viewbox>
         </Button>
-        <Button x:Name="positiveNegativeButton" Grid.Column="3" Grid.Row="1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="7">
+        <Button x:Name="negateButton" Command="{Binding SelectNegateButtonCommand, Mode=OneWay}" Grid.Column="3" Grid.Row="1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="7">
             <Viewbox VerticalAlignment="Center" HorizontalAlignment="Center">
                 <TextBlock Text="+/-"/>
             </Viewbox>

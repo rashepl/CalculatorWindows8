@@ -22,7 +22,7 @@
                 <TextBlock Text="{Binding SelectedValueDisplayed, Mode=OneWay}" Padding="0" Margin="7" FontSize="40" FlowDirection="LeftToRight" TextAlignment="Right" />
             </StackPanel>
         </Border>
-        <UserControl x:Name="_calculatorView" Grid.Row="3"/>
+        <UserControl x:Name="_calculatorView" Grid.Row="3" FlowDirection="LeftToRight"/>
     </Grid>
 </Page>
 

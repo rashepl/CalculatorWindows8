@@ -29,12 +29,7 @@ namespace CalculatorWindows8
 		/// <summary>
 		/// tracks the value selected by the user upon pressing a numeric button
 		/// </summary>
-		private int _selectedValue = 0;
-
-		/// <summary>
-		/// tracks indication if the calculator is in a state ready to calculate an equation
-		/// </summary>
-		private bool _calculate = false;
+		private double _selectedValue = 0;
 
 		/// <summary>
 		/// tracks indication if the last entry by the user was an operand
@@ -176,6 +171,11 @@ namespace CalculatorWindows8
 			get { return new RelayCommand(SelectBackButton); }
 		}
 
+		public ICommand SelectNegateButtonCommand
+		{
+			get { return new RelayCommand(SelectNegateButton); }
+		}
+
 		/// <summary>
 		/// gets/sets the value selected by the user
 		/// </summary>
@@ -192,7 +192,7 @@ namespace CalculatorWindows8
 		/// <summary>
 		/// gets/sets the numeric value entered by the user
 		/// </summary>
-		private int SelectedValue
+		private double SelectedValue
 		{
 			get { return _selectedValue; }
 			set
@@ -217,7 +217,7 @@ namespace CalculatorWindows8
 		/// <summary>
 		/// gets/sets the first value entered
 		/// </summary>
-		private int CalculatedValue
+		private double CalculatedValue
 		{
 			get;
 			set;
@@ -428,28 +428,10 @@ namespace CalculatorWindows8
 		/// <param name="sender"></param>
 		private void SelectEqualsButton(object sender)
 		{
-			if (_firstValueEntered && _calculate)
+			if (_firstValueEntered && _lastEnteredOperand != string.Empty)
 			{
 				EquationDisplayed = string.Empty;
-
-				if (string.Compare(_lastEnteredOperand, "+") == 0)
-				{
-					CalculatedValue += CalculatedValue;
-				}
-				else if (string.Compare(_lastEnteredOperand, "-") == 0)
-				{
-					CalculatedValue -= CalculatedValue;
-				}
-				else if (string.Compare(_lastEnteredOperand, "*") == 0)
-				{
-					CalculatedValue *= CalculatedValue;
-				}
-				else if (string.Compare(_lastEnteredOperand, "/") == 0)
-				{
-					CalculatedValue /= CalculatedValue;
-				}
-
-				SelectedValueDisplayed = CalculatedValue.ToString();
+				CalculateSelectedValue();
 			}
 		}
 
@@ -461,20 +443,23 @@ namespace CalculatorWindows8
 		{
 			if (_firstValueEntered)
 			{
-				_operandEnteredLast = true;
-				_lastEnteredOperand = "+";
-				EquationDisplayed = EquationDisplayed != string.Empty ? string.Format("{0} {1} {2}", EquationDisplayed, SelectedValue.ToString(), "+") : string.Format("{0} {1}", SelectedValue.ToString(), "+");
-
-				if (_calculate)
+				if (_operandEnteredLast)
 				{
-					CalculatedValue += SelectedValue;
-					SelectedValueDisplayed = CalculatedValue.ToString();
+					EquationDisplayed = EquationDisplayed != string.Empty ? EquationDisplayed.Remove(EquationDisplayed.Length - 1, 1) : string.Empty;
+					EquationDisplayed = EquationDisplayed != string.Empty ? string.Format("{0}{1}", EquationDisplayed, "+") : string.Empty;
 				}
 				else
 				{
-					_calculate = true;
+					EquationDisplayed = EquationDisplayed != string.Empty ? string.Format("{0} {1} {2}", EquationDisplayed, SelectedValue.ToString(), "+") : string.Format("{0} {1}", SelectedValue.ToString(), "+");
+					if (_lastEnteredOperand != string.Empty)
+					{
+						CalculateSelectedValue();
+					}
 				}
+
+				_lastEnteredOperand = "+";
 			}
+			_operandEnteredLast = true;
 		}
 
 		/// <summary>
@@ -485,20 +470,23 @@ namespace CalculatorWindows8
 		{
 			if (_firstValueEntered)
 			{
-				_operandEnteredLast = true;
-				_lastEnteredOperand = "-";
-				EquationDisplayed = EquationDisplayed != string.Empty ? string.Format("{0} {1} {2}", EquationDisplayed, SelectedValue.ToString(), "-") : string.Format("{0} {1}", SelectedValue.ToString(), "-");
-
-				if (_calculate)
+				if (_operandEnteredLast)
 				{
-					CalculatedValue -= SelectedValue;
-					SelectedValueDisplayed = CalculatedValue.ToString();
+					EquationDisplayed = EquationDisplayed != string.Empty ? EquationDisplayed.Remove(EquationDisplayed.Length - 1, 1) : string.Empty;
+					EquationDisplayed = EquationDisplayed != string.Empty ? string.Format("{0}{1}", EquationDisplayed, "-") : string.Empty;
 				}
 				else
 				{
-					_calculate = true;
+					EquationDisplayed = EquationDisplayed != string.Empty ? string.Format("{0} {1} {2}", EquationDisplayed, SelectedValue.ToString(), "-") : string.Format("{0} {1}", SelectedValue.ToString(), "-");
+					if (_lastEnteredOperand != string.Empty)
+					{
+						CalculateSelectedValue();
+					}
 				}
+
+				_lastEnteredOperand = "-";
 			}
+			_operandEnteredLast = true;
 		}
 
 		/// <summary>
@@ -509,20 +497,23 @@ namespace CalculatorWindows8
 		{
 			if (_firstValueEntered)
 			{
-				_operandEnteredLast = true;
-				_lastEnteredOperand = "*";
-				EquationDisplayed = EquationDisplayed != string.Empty ? string.Format("{0} {1} {2}", EquationDisplayed, SelectedValue.ToString(), "*") : string.Format("{0} {1}", SelectedValue.ToString(), "*");
-
-				if (_calculate)
+				if (_operandEnteredLast)
 				{
-					CalculatedValue *= SelectedValue;
-					SelectedValueDisplayed = CalculatedValue.ToString();
+					EquationDisplayed = EquationDisplayed != string.Empty ? EquationDisplayed.Remove(EquationDisplayed.Length - 1, 1) : string.Empty;
+					EquationDisplayed = EquationDisplayed != string.Empty ? string.Format("{0}{1}", EquationDisplayed, "*") : string.Empty;
 				}
 				else
 				{
-					_calculate = true;
+					EquationDisplayed = EquationDisplayed != string.Empty ? string.Format("{0} {1} {2}", EquationDisplayed, SelectedValue.ToString(), "*") : string.Format("{0} {1}", SelectedValue.ToString(), "*");
+					if (_lastEnteredOperand != string.Empty)
+					{
+						CalculateSelectedValue();
+					}
 				}
+			
+				_lastEnteredOperand = "*";
 			}
+			_operandEnteredLast = true;
 		}
 
 		/// <summary>
@@ -533,20 +524,23 @@ namespace CalculatorWindows8
 		{
 			if (_firstValueEntered)
 			{
-				_operandEnteredLast = true;
-				_lastEnteredOperand = "/";
-				EquationDisplayed = EquationDisplayed != string.Empty ? string.Format("{0} {1} {2}", EquationDisplayed, SelectedValue.ToString(), "/") : string.Format("{0} {1}", SelectedValue.ToString(), "/");
-
-				if (_calculate)
+				if (_operandEnteredLast)
 				{
-					CalculatedValue /= SelectedValue;
-					SelectedValueDisplayed = CalculatedValue.ToString();
+					EquationDisplayed = EquationDisplayed != string.Empty ? EquationDisplayed.Remove(EquationDisplayed.Length - 1, 1) : string.Empty;
+					EquationDisplayed = EquationDisplayed != string.Empty ? string.Format("{0}{1}", EquationDisplayed, "/") : string.Empty;
 				}
 				else
 				{
-					_calculate = true;
+					EquationDisplayed = EquationDisplayed != string.Empty ? string.Format("{0} {1} {2}", EquationDisplayed, SelectedValue.ToString(), "/") : string.Format("{0} {1}", SelectedValue.ToString(), "/");
+					if (_lastEnteredOperand != string.Empty)
+					{
+						CalculateSelectedValue();
+					}
 				}
+
+				_lastEnteredOperand = "/";
 			}
+			_operandEnteredLast = true;
 		}
 
 		/// <summary>
@@ -558,6 +552,7 @@ namespace CalculatorWindows8
 			EquationDisplayed = string.Empty;
 			CalculatedValue = 0;
 			SelectedValueDisplayed = "0";
+			_lastEnteredOperand = string.Empty;
 		}
 
 		/// <summary>
@@ -568,6 +563,7 @@ namespace CalculatorWindows8
 		{
 			SelectedValue = 0;
 			SelectedValueDisplayed = "0";
+			_lastEnteredOperand = string.Empty;
 		}
 
 		/// <summary>
@@ -578,6 +574,43 @@ namespace CalculatorWindows8
 		{
 			SelectedValue /= 10;
 			SelectedValueDisplayed = SelectedValue.ToString();
+		}
+
+		/// <summary>
+		/// negate the value selected by the user
+		/// </summary>
+		/// <param name="sender"></param>
+		private void SelectNegateButton(object sender)
+		{
+			SelectedValue *= -1;
+			SelectedValueDisplayed = SelectedValue.ToString();
+		}
+
+		/// <summary>
+		/// calculates the value selected by the user
+		/// </summary>
+		private void CalculateSelectedValue()
+		{
+			if (_lastEnteredOperand == "+")
+			{
+				CalculatedValue += SelectedValue;
+				SelectedValueDisplayed = CalculatedValue.ToString();
+			}
+			else if (_lastEnteredOperand == "-")
+			{
+				CalculatedValue -= SelectedValue;
+				SelectedValueDisplayed = CalculatedValue.ToString();
+			}
+			else if (_lastEnteredOperand == "*")
+			{
+				CalculatedValue *= SelectedValue;
+				SelectedValueDisplayed = CalculatedValue.ToString();
+			}
+			else if (_lastEnteredOperand == "/")
+			{
+				CalculatedValue /= SelectedValue;
+				SelectedValueDisplayed = CalculatedValue.ToString();
+			}
 		}
 
 		#endregion

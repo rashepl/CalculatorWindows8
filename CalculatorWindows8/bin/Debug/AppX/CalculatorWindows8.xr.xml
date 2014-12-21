@@ -16,6 +16,7 @@
     <RootPropertyPathName Name="SelectNineButtonCommand" />
     <RootPropertyPathName Name="SelectEightButtonCommand" />
     <RootPropertyPathName Name="SelectSevenButtonCommand" />
+    <RootPropertyPathName Name="SelectNegateButtonCommand" />
     <RootPropertyPathName Name="SelectCButtonCommand" />
     <RootPropertyPathName Name="SelectCEButtonCommand" />
     <RootPropertyPathName Name="SelectBackButtonCommand" />
@@ -26,6 +27,7 @@
     <RootType FullName="Windows.UI.Xaml.Application" />
     <RootType FullName="Windows.UI.Xaml.Controls.UserControl">
       <RootProperty Name="Content" />
+      <RootProperty Name="FlowDirection" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Grid">
       <RootProperty Name="ColumnDefinitions" />
