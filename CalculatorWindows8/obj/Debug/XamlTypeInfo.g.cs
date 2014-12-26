@@ -227,6 +227,11 @@ namespace CalculatorWindows8.CalculatorWindows8_XamlTypeInfo
                 userType.AddMemberName("SelectCEButtonCommand");
                 userType.AddMemberName("SelectBackButtonCommand");
                 userType.AddMemberName("SelectNegateButtonCommand");
+                userType.AddMemberName("SelectMemoryClearButtonCommand");
+                userType.AddMemberName("SelectMemoryRecallButtonCommand");
+                userType.AddMemberName("SelectMemoryStoreButtonCommand");
+                userType.AddMemberName("SelectMemoryAddButtonCommand");
+                userType.AddMemberName("SelectMemorySubtractButtonCommand");
                 userType.AddMemberName("SelectedValueDisplayed");
                 userType.AddMemberName("EquationDisplayed");
                 userType.SetIsLocalType();
@@ -364,22 +369,47 @@ namespace CalculatorWindows8.CalculatorWindows8_XamlTypeInfo
             var that = (global::CalculatorWindows8.MainPageViewModel)instance;
             return that.SelectNegateButtonCommand;
         }
-        private object get_19_MainPageViewModel_SelectedValueDisplayed(object instance)
+        private object get_19_MainPageViewModel_SelectMemoryClearButtonCommand(object instance)
+        {
+            var that = (global::CalculatorWindows8.MainPageViewModel)instance;
+            return that.SelectMemoryClearButtonCommand;
+        }
+        private object get_20_MainPageViewModel_SelectMemoryRecallButtonCommand(object instance)
+        {
+            var that = (global::CalculatorWindows8.MainPageViewModel)instance;
+            return that.SelectMemoryRecallButtonCommand;
+        }
+        private object get_21_MainPageViewModel_SelectMemoryStoreButtonCommand(object instance)
+        {
+            var that = (global::CalculatorWindows8.MainPageViewModel)instance;
+            return that.SelectMemoryStoreButtonCommand;
+        }
+        private object get_22_MainPageViewModel_SelectMemoryAddButtonCommand(object instance)
+        {
+            var that = (global::CalculatorWindows8.MainPageViewModel)instance;
+            return that.SelectMemoryAddButtonCommand;
+        }
+        private object get_23_MainPageViewModel_SelectMemorySubtractButtonCommand(object instance)
+        {
+            var that = (global::CalculatorWindows8.MainPageViewModel)instance;
+            return that.SelectMemorySubtractButtonCommand;
+        }
+        private object get_24_MainPageViewModel_SelectedValueDisplayed(object instance)
         {
             var that = (global::CalculatorWindows8.MainPageViewModel)instance;
             return that.SelectedValueDisplayed;
         }
-        private void set_19_MainPageViewModel_SelectedValueDisplayed(object instance, object Value)
+        private void set_24_MainPageViewModel_SelectedValueDisplayed(object instance, object Value)
         {
             var that = (global::CalculatorWindows8.MainPageViewModel)instance;
             that.SelectedValueDisplayed = (global::System.String)Value;
         }
-        private object get_20_MainPageViewModel_EquationDisplayed(object instance)
+        private object get_25_MainPageViewModel_EquationDisplayed(object instance)
         {
             var that = (global::CalculatorWindows8.MainPageViewModel)instance;
             return that.EquationDisplayed;
         }
-        private void set_20_MainPageViewModel_EquationDisplayed(object instance, object Value)
+        private void set_25_MainPageViewModel_EquationDisplayed(object instance, object Value)
         {
             var that = (global::CalculatorWindows8.MainPageViewModel)instance;
             that.EquationDisplayed = (global::System.String)Value;
@@ -506,17 +536,47 @@ namespace CalculatorWindows8.CalculatorWindows8_XamlTypeInfo
                 xamlMember.Getter = get_18_MainPageViewModel_SelectNegateButtonCommand;
                 xamlMember.SetIsReadOnly();
                 break;
+            case "CalculatorWindows8.MainPageViewModel.SelectMemoryClearButtonCommand":
+                userType = (global::CalculatorWindows8.CalculatorWindows8_XamlTypeInfo.XamlUserType)GetXamlTypeByName("CalculatorWindows8.MainPageViewModel");
+                xamlMember = new global::CalculatorWindows8.CalculatorWindows8_XamlTypeInfo.XamlMember(this, "SelectMemoryClearButtonCommand", "System.Windows.Input.ICommand");
+                xamlMember.Getter = get_19_MainPageViewModel_SelectMemoryClearButtonCommand;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "CalculatorWindows8.MainPageViewModel.SelectMemoryRecallButtonCommand":
+                userType = (global::CalculatorWindows8.CalculatorWindows8_XamlTypeInfo.XamlUserType)GetXamlTypeByName("CalculatorWindows8.MainPageViewModel");
+                xamlMember = new global::CalculatorWindows8.CalculatorWindows8_XamlTypeInfo.XamlMember(this, "SelectMemoryRecallButtonCommand", "System.Windows.Input.ICommand");
+                xamlMember.Getter = get_20_MainPageViewModel_SelectMemoryRecallButtonCommand;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "CalculatorWindows8.MainPageViewModel.SelectMemoryStoreButtonCommand":
+                userType = (global::CalculatorWindows8.CalculatorWindows8_XamlTypeInfo.XamlUserType)GetXamlTypeByName("CalculatorWindows8.MainPageViewModel");
+                xamlMember = new global::CalculatorWindows8.CalculatorWindows8_XamlTypeInfo.XamlMember(this, "SelectMemoryStoreButtonCommand", "System.Windows.Input.ICommand");
+                xamlMember.Getter = get_21_MainPageViewModel_SelectMemoryStoreButtonCommand;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "CalculatorWindows8.MainPageViewModel.SelectMemoryAddButtonCommand":
+                userType = (global::CalculatorWindows8.CalculatorWindows8_XamlTypeInfo.XamlUserType)GetXamlTypeByName("CalculatorWindows8.MainPageViewModel");
+                xamlMember = new global::CalculatorWindows8.CalculatorWindows8_XamlTypeInfo.XamlMember(this, "SelectMemoryAddButtonCommand", "System.Windows.Input.ICommand");
+                xamlMember.Getter = get_22_MainPageViewModel_SelectMemoryAddButtonCommand;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "CalculatorWindows8.MainPageViewModel.SelectMemorySubtractButtonCommand":
+                userType = (global::CalculatorWindows8.CalculatorWindows8_XamlTypeInfo.XamlUserType)GetXamlTypeByName("CalculatorWindows8.MainPageViewModel");
+                xamlMember = new global::CalculatorWindows8.CalculatorWindows8_XamlTypeInfo.XamlMember(this, "SelectMemorySubtractButtonCommand", "System.Windows.Input.ICommand");
+                xamlMember.Getter = get_23_MainPageViewModel_SelectMemorySubtractButtonCommand;
+                xamlMember.SetIsReadOnly();
+                break;
             case "CalculatorWindows8.MainPageViewModel.SelectedValueDisplayed":
                 userType = (global::CalculatorWindows8.CalculatorWindows8_XamlTypeInfo.XamlUserType)GetXamlTypeByName("CalculatorWindows8.MainPageViewModel");
                 xamlMember = new global::CalculatorWindows8.CalculatorWindows8_XamlTypeInfo.XamlMember(this, "SelectedValueDisplayed", "String");
-                xamlMember.Getter = get_19_MainPageViewModel_SelectedValueDisplayed;
-                xamlMember.Setter = set_19_MainPageViewModel_SelectedValueDisplayed;
+                xamlMember.Getter = get_24_MainPageViewModel_SelectedValueDisplayed;
+                xamlMember.Setter = set_24_MainPageViewModel_SelectedValueDisplayed;
                 break;
             case "CalculatorWindows8.MainPageViewModel.EquationDisplayed":
                 userType = (global::CalculatorWindows8.CalculatorWindows8_XamlTypeInfo.XamlUserType)GetXamlTypeByName("CalculatorWindows8.MainPageViewModel");
                 xamlMember = new global::CalculatorWindows8.CalculatorWindows8_XamlTypeInfo.XamlMember(this, "EquationDisplayed", "String");
-                xamlMember.Getter = get_20_MainPageViewModel_EquationDisplayed;
-                xamlMember.Setter = set_20_MainPageViewModel_EquationDisplayed;
+                xamlMember.Getter = get_25_MainPageViewModel_EquationDisplayed;
+                xamlMember.Setter = set_25_MainPageViewModel_EquationDisplayed;
                 break;
             }
             return xamlMember;
@@ -843,5 +903,11 @@ namespace CalculatorWindows8.CalculatorWindows8_XamlTypeInfo
         }
     }
 }
+
+
+
+
+
+
 
 

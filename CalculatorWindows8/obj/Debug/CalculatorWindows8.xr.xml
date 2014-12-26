@@ -20,6 +20,11 @@
     <RootPropertyPathName Name="SelectCButtonCommand" />
     <RootPropertyPathName Name="SelectCEButtonCommand" />
     <RootPropertyPathName Name="SelectBackButtonCommand" />
+    <RootPropertyPathName Name="SelectMemorySubtractButtonCommand" />
+    <RootPropertyPathName Name="SelectMemoryAddButtonCommand" />
+    <RootPropertyPathName Name="SelectMemoryStoreButtonCommand" />
+    <RootPropertyPathName Name="SelectMemoryRecallButtonCommand" />
+    <RootPropertyPathName Name="SelectMemoryClearButtonCommand" />
     <RootPropertyPathName Name="SelectedValueDisplayed" />
     <RootPropertyPathName Name="EquationDisplayed" />
   </Roots.PropertyPathNames>
@@ -52,11 +57,11 @@
       <RootProperty Name="Height" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Button">
+      <RootProperty Name="Command" />
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="Margin" />
       <RootProperty Name="Content" />
-      <RootProperty Name="Command" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Data.Binding">
       <RootProperty Name="Mode" />
@@ -72,6 +77,8 @@
       <RootProperty Name="FontSize" />
       <RootProperty Name="FlowDirection" />
       <RootProperty Name="TextAlignment" />
+      <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="Padding" />
     </RootType>
     <RootType FullName="CalculatorWindows8.BasicCalculatorView" />
@@ -85,9 +92,6 @@
       <RootProperty Name="BorderBrush" />
       <RootProperty Name="BorderThickness" />
       <RootProperty Name="Child" />
-    </RootType>
-    <RootType FullName="Windows.UI.Xaml.Controls.StackPanel">
-      <RootProperty Name="Children" />
     </RootType>
     <RootType FullName="CalculatorWindows8.MainPage" />
   </Roots.RootTypes>

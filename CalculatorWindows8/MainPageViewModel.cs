@@ -41,6 +41,11 @@ namespace CalculatorWindows8
 		/// </summary>
 		private string _lastEnteredOperand = string.Empty;
 
+		/// <summary>
+		/// store the number used in memory recall
+		/// </summary>
+		private double _memoryRecallValue = 0;
+
 		#endregion
 
 		#region properties
@@ -176,6 +181,31 @@ namespace CalculatorWindows8
 			get { return new RelayCommand(SelectNegateButton); }
 		}
 
+		public ICommand SelectMemoryClearButtonCommand
+		{
+			get { return new RelayCommand(SelectMemoryClearButton); }
+		}
+
+		public ICommand SelectMemoryRecallButtonCommand
+		{
+			get { return new RelayCommand(SelectMemoryRecallButton); }
+		}
+
+		public ICommand SelectMemoryStoreButtonCommand
+		{
+			get { return new RelayCommand(SelectMemoryStoreButton); }
+		}
+
+		public ICommand SelectMemoryAddButtonCommand
+		{
+			get { return new RelayCommand(SelectMemoryAddButton); }
+		}
+
+		public ICommand SelectMemorySubtractButtonCommand
+		{
+			get { return new RelayCommand(SelectMemorySubtractButton); }
+		}
+
 		/// <summary>
 		/// gets/sets the value selected by the user
 		/// </summary>
@@ -253,8 +283,8 @@ namespace CalculatorWindows8
 
 			if (!_firstValueEntered)
 			{
-				CalculatedValue = SelectedValue;
 				_firstValueEntered = true;
+				CalculatedValue = SelectedValue;
 			}
 
 			SelectedValueDisplayed = SelectedValue.ToString();
@@ -271,8 +301,8 @@ namespace CalculatorWindows8
 
 			if (!_firstValueEntered)
 			{
+				_firstValueEntered = true; 
 				CalculatedValue = SelectedValue;
-				_firstValueEntered = true;
 			}
 
 			SelectedValueDisplayed = SelectedValue.ToString();
@@ -289,8 +319,8 @@ namespace CalculatorWindows8
 
 			if (!_firstValueEntered)
 			{
+				_firstValueEntered = true; 
 				CalculatedValue = SelectedValue;
-				_firstValueEntered = true;
 			}
 
 			SelectedValueDisplayed = SelectedValue.ToString();
@@ -307,8 +337,8 @@ namespace CalculatorWindows8
 
 			if (!_firstValueEntered)
 			{
-				CalculatedValue = SelectedValue;
 				_firstValueEntered = true;
+				CalculatedValue = SelectedValue;
 			}
 
 			SelectedValueDisplayed = SelectedValue.ToString();
@@ -325,8 +355,8 @@ namespace CalculatorWindows8
 
 			if (!_firstValueEntered)
 			{
-				CalculatedValue = SelectedValue;
 				_firstValueEntered = true;
+				CalculatedValue = SelectedValue;
 			}
 
 			SelectedValueDisplayed = SelectedValue.ToString();
@@ -343,8 +373,8 @@ namespace CalculatorWindows8
 
 			if (!_firstValueEntered)
 			{
-				CalculatedValue = SelectedValue;
 				_firstValueEntered = true;
+				CalculatedValue = SelectedValue;
 			}
 
 			SelectedValueDisplayed = SelectedValue.ToString();
@@ -361,8 +391,8 @@ namespace CalculatorWindows8
 
 			if (!_firstValueEntered)
 			{
-				CalculatedValue = SelectedValue;
 				_firstValueEntered = true;
+				CalculatedValue = SelectedValue;
 			}
 
 			SelectedValueDisplayed = SelectedValue.ToString();
@@ -379,8 +409,8 @@ namespace CalculatorWindows8
 
 			if (!_firstValueEntered)
 			{
-				CalculatedValue = SelectedValue;
 				_firstValueEntered = true;
+				CalculatedValue = SelectedValue;
 			}
 
 			SelectedValueDisplayed = SelectedValue.ToString();
@@ -397,8 +427,8 @@ namespace CalculatorWindows8
 
 			if (!_firstValueEntered)
 			{
-				CalculatedValue = SelectedValue;
 				_firstValueEntered = true;
+				CalculatedValue = SelectedValue;
 			}
 
 			SelectedValueDisplayed = SelectedValue.ToString();
@@ -415,8 +445,8 @@ namespace CalculatorWindows8
 
 			if (!_firstValueEntered)
 			{
-				CalculatedValue = SelectedValue;
 				_firstValueEntered = true;
+				CalculatedValue = SelectedValue;
 			}
 
 			SelectedValueDisplayed = SelectedValue.ToString();
@@ -432,6 +462,8 @@ namespace CalculatorWindows8
 			{
 				EquationDisplayed = string.Empty;
 				CalculateSelectedValue();
+				_operandEnteredLast = false;
+				CalculatedValue = 0.0;
 			}
 		}
 
@@ -459,6 +491,7 @@ namespace CalculatorWindows8
 
 				_lastEnteredOperand = "+";
 			}
+
 			_operandEnteredLast = true;
 		}
 
@@ -486,6 +519,7 @@ namespace CalculatorWindows8
 
 				_lastEnteredOperand = "-";
 			}
+
 			_operandEnteredLast = true;
 		}
 
@@ -513,6 +547,7 @@ namespace CalculatorWindows8
 			
 				_lastEnteredOperand = "*";
 			}
+
 			_operandEnteredLast = true;
 		}
 
@@ -540,6 +575,7 @@ namespace CalculatorWindows8
 
 				_lastEnteredOperand = "/";
 			}
+
 			_operandEnteredLast = true;
 		}
 
@@ -553,6 +589,7 @@ namespace CalculatorWindows8
 			CalculatedValue = 0;
 			SelectedValueDisplayed = "0";
 			_lastEnteredOperand = string.Empty;
+			_firstValueEntered = false;
 		}
 
 		/// <summary>
@@ -564,6 +601,7 @@ namespace CalculatorWindows8
 			SelectedValue = 0;
 			SelectedValueDisplayed = "0";
 			_lastEnteredOperand = string.Empty;
+			_firstValueEntered = false;
 		}
 
 		/// <summary>
@@ -587,30 +625,88 @@ namespace CalculatorWindows8
 		}
 
 		/// <summary>
+		/// clear the memory store
+		/// </summary>
+		/// <param name="sender"></param>
+		private void SelectMemoryClearButton(object sender)
+		{
+			_memoryRecallValue = 0;
+		}
+
+		/// <summary>
+		/// retrieve the memory recall value and store into the currently selected value field for display
+		/// </summary>
+		/// <param name="sender"></param>
+		private void SelectMemoryRecallButton(object sender)
+		{
+			SelectedValue = _memoryRecallValue;
+			//CalculatedValue = 0.0;
+			SelectedValueDisplayed = SelectedValue.ToString();
+			_operandEnteredLast = false;
+		}
+
+		/// <summary>
+		/// store the currently entered value into the memory store
+		/// </summary>
+		/// <param name="sender"></param>
+		private void SelectMemoryStoreButton(object sender)
+		{
+			_memoryRecallValue = SelectedValue;
+			CalculatedValue = 0.0;
+			_operandEnteredLast = false;
+		}
+
+		/// <summary>
+		/// take the currently entered value and add it to the current value in the memory store
+		/// </summary>
+		/// <param name="sender"></param>
+		private void SelectMemoryAddButton(object sender)
+		{
+			_memoryRecallValue += SelectedValue;
+		}
+
+		/// <summary>
+		/// take the currently entered value and subtract it from the current value in the memory store
+		/// </summary>
+		/// <param name="sender"></param>
+		private void SelectMemorySubtractButton(object sender)
+		{
+			_memoryRecallValue -= SelectedValue;
+		}
+
+		/// <summary>
 		/// calculates the value selected by the user
 		/// </summary>
 		private void CalculateSelectedValue()
 		{
-			if (_lastEnteredOperand == "+")
-			{
-				CalculatedValue += SelectedValue;
-				SelectedValueDisplayed = CalculatedValue.ToString();
-			}
-			else if (_lastEnteredOperand == "-")
-			{
-				CalculatedValue -= SelectedValue;
-				SelectedValueDisplayed = CalculatedValue.ToString();
-			}
-			else if (_lastEnteredOperand == "*")
-			{
-				CalculatedValue *= SelectedValue;
-				SelectedValueDisplayed = CalculatedValue.ToString();
-			}
-			else if (_lastEnteredOperand == "/")
-			{
-				CalculatedValue /= SelectedValue;
-				SelectedValueDisplayed = CalculatedValue.ToString();
-			}
+				if (_lastEnteredOperand == "+")
+				{
+					CalculatedValue += SelectedValue;
+					SelectedValueDisplayed = CalculatedValue.ToString();
+					SelectedValue = CalculatedValue;
+				}
+				else if (_lastEnteredOperand == "-")
+				{
+					CalculatedValue -= SelectedValue;
+					SelectedValueDisplayed = CalculatedValue.ToString();
+					SelectedValue = CalculatedValue;
+				}
+				else if (_lastEnteredOperand == "*")
+				{
+					CalculatedValue *= SelectedValue;
+					SelectedValueDisplayed = CalculatedValue.ToString();
+					SelectedValue = CalculatedValue;
+				}
+				else if (_lastEnteredOperand == "/")
+				{
+					CalculatedValue /= SelectedValue;
+					SelectedValueDisplayed = CalculatedValue.ToString();
+					SelectedValue = CalculatedValue;
+				}
+				else
+				{
+					CalculatedValue = SelectedValue;
+				}
 		}
 
 		#endregion

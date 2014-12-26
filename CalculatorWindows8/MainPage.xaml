@@ -17,10 +17,23 @@
             <RowDefinition Height="613*"/>
         </Grid.RowDefinitions>
         <Border Grid.Row="1" BorderBrush="#FF2065DE" BorderThickness="4">
-            <StackPanel>
-                <TextBlock Text="{Binding EquationDisplayed, Mode=OneWay}" Margin="7" FontSize="30" FlowDirection="LeftToRight" TextAlignment="Right" />
-                <TextBlock Text="{Binding SelectedValueDisplayed, Mode=OneWay}" Padding="0" Margin="7" FontSize="40" FlowDirection="LeftToRight" TextAlignment="Right" />
-            </StackPanel>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="5"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <TextBlock Text="{Binding EquationDisplayed, Mode=OneWay}" Grid.Row="0" Margin="7" FontSize="30" FlowDirection="LeftToRight" TextAlignment="Right" />
+                <Grid Grid.Row="2" FlowDirection="LeftToRight">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="5*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Text="M" Grid.Column="0" HorizontalAlignment="Left" FontSize="20" VerticalAlignment="Bottom"/>
+                    <TextBlock Text="{Binding SelectedValueDisplayed, Mode=OneWay}" Grid.Column="2" Padding="0" Margin="7" FontSize="40" TextAlignment="Right" />
+                </Grid>
+            </Grid>
         </Border>
         <UserControl x:Name="_calculatorView" Grid.Row="3" FlowDirection="LeftToRight"/>
     </Grid>

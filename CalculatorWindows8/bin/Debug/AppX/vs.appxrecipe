@@ -20,13 +20,13 @@
     <AppXManifest Include="D:\Software Projects\CalculatorWindows8\CalculatorWindows8\bin\Debug\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2014-12-19T19:18:19.235</Modified>
+      <Modified>2014-12-23T05:51:35.890</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="D:\Software Projects\CalculatorWindows8\CalculatorWindows8\bin\Debug\CalculatorWindows8.exe">
       <PackagePath>CalculatorWindows8.exe</PackagePath>
-      <Modified>2014-12-21T16:02:56.702</Modified>
+      <Modified>2014-12-25T05:56:18.684</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Software Projects\CalculatorWindows8\CalculatorWindows8\Assets\Logo.scale-100.png">
       <PackagePath>Assets\Logo.scale-100.png</PackagePath>
@@ -54,19 +54,19 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Software Projects\CalculatorWindows8\CalculatorWindows8\bin\Debug\BasicCalculatorView.xbf">
       <PackagePath>BasicCalculatorView.xbf</PackagePath>
-      <Modified>2014-12-21T07:47:06.798</Modified>
+      <Modified>2014-12-25T05:34:04.259</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Software Projects\CalculatorWindows8\CalculatorWindows8\bin\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2014-12-21T16:02:56.414</Modified>
+      <Modified>2014-12-25T05:34:04.259</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Software Projects\CalculatorWindows8\CalculatorWindows8\bin\Debug\CalculatorWindows8.xr.xml">
       <PackagePath>CalculatorWindows8.xr.xml</PackagePath>
-      <Modified>2014-12-21T16:02:56.362</Modified>
+      <Modified>2014-12-25T05:34:04.187</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Software Projects\CalculatorWindows8\CalculatorWindows8\bin\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2014-12-19T19:18:19.177</Modified>
+      <Modified>2014-12-23T05:51:35.499</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
